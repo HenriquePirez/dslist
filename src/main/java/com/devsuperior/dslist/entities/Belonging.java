@@ -20,4 +20,10 @@ public class Belonging {
   private BelongingPK id = new BelongingPK();
 
   private Integer position;
+
+  // public Belonging(Game game, GameList list, Integer position) {
+  //   id.setGame(game);
+  //   id.setList(list);
+  //   this.position = position;
+  // }
 }

@@ -5,8 +5,16 @@ import java.util.Objects;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Embeddable
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class BelongingPK {
   
   @ManyToOne
@@ -16,30 +24,6 @@ public class BelongingPK {
   @ManyToOne
   @JoinColumn(name = "list_id")
   private GameList list;
-
-  public BelongingPK() {
-  }
-
-  public BelongingPK(Game game, GameList list) {
-    this.game = game;
-    this.list = list;
-  }
-
-  public Game getGame() {
-    return game;
-  }
-
-  public void setGame(Game game) {
-    this.game = game;
-  }
-
-  public GameList getGameList() {
-    return list;
-  }
-
-  public void setGameList(GameList gameList) {
-    this.list = gameList;
-  }
 
   @Override
   public int hashCode() {

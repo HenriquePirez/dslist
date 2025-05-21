@@ -122,7 +122,7 @@ public class Game {
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(id);
   }
 
   @Override

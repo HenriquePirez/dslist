@@ -8,13 +8,17 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
 @Table(name = "tb_game")
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Game {
 
   @Id
@@ -35,19 +39,6 @@ public class Game {
 
   @Column(columnDefinition = "TEXT")
   private String longDescription;
-
-  public Game(Long id, String title, Integer year, String genre, String platforms, Double score, String imgUrl,
-      String shortDescription, String longDescription) {
-    this.id = id;
-    this.title = title;
-    this.year = year;
-    this.genre = genre;
-    this.platforms = platforms;
-    this.score = score;
-    this.imgUrl = imgUrl;
-    this.shortDescription = shortDescription;
-    this.longDescription = longDescription;
-  }
 
   @Override
   public int hashCode() {
